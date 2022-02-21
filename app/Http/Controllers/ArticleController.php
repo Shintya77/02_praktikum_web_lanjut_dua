@@ -9,4 +9,7 @@ class ArticleController extends Controller
     public function articles($id){
         echo "Halaman artikel dengan ID : ".$id;
     }
+    public function article(){
+        echo "Halaman artikel dengan ID : ";
+    }
 }

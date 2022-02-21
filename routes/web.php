@@ -13,14 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticleController;
 
 Route::get('/', [HomeController::class, 'index']);
-
-use App\Http\Controllers\AboutController;
 Route::get('/about', [AboutController::class, 'about']);
-
-use App\Http\Controllers\ArticleController;
 Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+Route::get('/article', [ArticleController::class, 'article']);
 
 // Route::get('/', function(){
 //     echo "Selamat Datang";
