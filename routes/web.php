@@ -12,11 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Http\Controllers\PageController;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', [PageController::class, 'index']);
-Route::get('/about', [PageController::class, 'about']);
-Route::get('/articles/{id}', [PageController::class, 'articles']);
+Route::get('/', [HomeController::class, 'index']);
+
+use App\Http\Controllers\AboutController;
+Route::get('/about', [AboutController::class, 'about']);
+
+use App\Http\Controllers\ArticleController;
+Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
 // Route::get('/', function(){
 //     echo "Selamat Datang";
